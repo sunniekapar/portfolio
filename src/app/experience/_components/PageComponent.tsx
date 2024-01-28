@@ -56,7 +56,7 @@ export default function PageComponent() {
                   jobTitle={'Lead Frontend Developer'}
                   jobDate={'Dec. 2022'}
                   jobImage={
-                    'https://source.unsplash.com/random/?MinimalRender&1'
+                    '/images/frontend.jpg'
                   }
                   jobDescription={[
                     'I was the lead frontend developer for Craig Kielburger Secondary School, where I mentored and taught my peers basic frontend skills.',
