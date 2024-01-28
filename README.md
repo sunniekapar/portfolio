@@ -1,2 +1,2 @@
 ### 👋 Hi I'm Sunnie Kapar
-Check out my website at ][https://sunniekapar.com][sunniekapar.com]
+Check out my website at [sunniekapar.com](https://sunniekapar.com)
