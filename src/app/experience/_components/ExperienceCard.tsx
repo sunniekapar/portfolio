@@ -1,6 +1,6 @@
 import React from 'react';
 import BentoCard from '@/components/BentoCard';
-
+import Image from 'next/image'
 type ExperienceCard = React.ComponentProps<typeof BentoCard>;
 
 interface ExperienceCardProps extends ExperienceCard {
@@ -24,13 +24,11 @@ export default function ExperienceCard({
       </h2>
       <BentoCard className="aspect-[2/1] rounded-3xl mb-8 !p-4">
         <div className="aspect-[2/1] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover mb-8">
-          <img
+          <Image
             src={jobImage}
             alt={jobTitle}
-            loading="lazy"
-            decoding="async"
-            data-nimg="1"
-            width="350"
+            width="600"
+            height='300'
             className="aspect-[2/1] rounded-xl min-w-full min-h-full object-cover"
           />
         </div>
