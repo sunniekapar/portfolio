@@ -22,6 +22,8 @@ export default function ProjectDescription({
             <Image
               src={`images/${projectPage}.png`}
               alt={imageAlt}
+              quality={80}
+              key={projectPage}
               className="aspect-video lg:aspect-[4/3] object-cover rounded-lg max-h-full max-w-full min-w-full min-h-full"
             />
           </div>

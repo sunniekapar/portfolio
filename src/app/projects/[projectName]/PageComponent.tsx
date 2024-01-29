@@ -73,8 +73,9 @@ export default function PageComponent({
             <Image
               src={`images/${projectPage}.png`}
               alt={imageAlt}
-              width="650"
-              height="488"
+              key={projectPage}
+              // width="650"
+              // height="488"
               className="relative rounded-lg aspect-[4/3] pointer-events-none object-cover w-full"
             />
           </div>

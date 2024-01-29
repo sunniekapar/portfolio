@@ -16,6 +16,8 @@ export default function ProjectCard({
         <Image
           src={`images/${projectPage}.png`}
           alt={imageAlt}
+          quality={80}
+          key={projectPage}
           className="aspect-[4/3] pointer-events-none min-h-full min-w-full !object-cover duration-300 scale-100 brightness-90 select-none group-hover:scale-105 group-hover:brightness-[20%]"
         />
       </div>
