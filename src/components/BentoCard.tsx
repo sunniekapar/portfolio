@@ -23,4 +23,6 @@ const BentoCard = React.forwardRef<HTMLDivElement, BentoCardProps>(
   }
 );
 
+BentoCard.displayName = 'BentoCard';
+
 export default BentoCard;

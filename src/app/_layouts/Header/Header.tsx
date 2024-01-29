@@ -1,8 +1,6 @@
 import BentoCard from '@/components/BentoCard';
 import FadeIn, { FadeInChild } from '@/components/FadeIn';
 import SocialButton from '@/components/SocialButton';
-import { motion } from 'framer-motion';
-import { FaRegEnvelope, FaGithub, FaLinkedin, FaDiscord, FaTwitter } from 'react-icons/fa';
 import { SiGithub, SiGmail, SiLinkedin, SiX } from 'react-icons/si';
 
 export default function Header() {
@@ -10,7 +8,7 @@ export default function Header() {
     {
       icon: <SiGmail />,
       description: 'kaparsunnie@gmail.com',
-      href: 'mailto:kaparsunnie@gmail.com', // Replace with your email link
+      href: 'mailto:kaparsunnie@gmail.com', 
     },
     {
       icon: <SiGithub />,
@@ -20,27 +18,14 @@ export default function Header() {
     {
       icon: <SiLinkedin />,
       description: 'Sunnie Kapar',
-      href: 'https://www.linkedin.com/in/sunnie-kapar/', // Replace with your LinkedIn profile link
+      href: 'https://www.linkedin.com/in/sunnie-kapar/',
     },
     {
       icon: <SiX />,
       description: 'sunniekapar',
-      href: 'https://www.x.com/sunniekapar', // Replace with your Discord link
+      href: 'https://www.x.com/sunniekapar', 
     },
-    // ... Add more buttons as needed
   ];
-  const variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        when: 'beforeChildren',
-        staggerChildren: 0.1,
-        opacity: { duration: 0.75 }, // Specific duration for opacity
-      },
-    },
-  };
   return (
     <>
       <FadeIn list className="mt-4 grid xl:grid-cols-ten-seven gap-4">
@@ -59,7 +44,7 @@ export default function Header() {
         <FadeInChild>
           <BentoCard className='flex flex-col justify-center items-center md:items-start text-center md:text-left'>
             <p className="text-lg sm:text-2xl leading-tight">
-              I love meeting new people and I'm always up for a great
+              I love meeting new people and I&apos;m always up for a great
               conversation.
               <span className="opacity-80">
                 {' '}

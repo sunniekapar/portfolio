@@ -30,7 +30,7 @@ export default function Details() {
       <FadeInChild>
         <BentoCard className="flex items-center">
           <p className="text-center md:text-left text-lg sm:text-xl md:text-2xl font-medium leading-tight">
-            I'm an 18 year-old self taught full-stack developer,{' '}
+            I&apos;m an 18 year-old self taught full-stack developer,{' '}
             <span className="opacity-80">
               currently studying computer engineering at University of Waterloo.
             </span>
@@ -45,7 +45,7 @@ export default function Details() {
           </p>
           <FadeIn list delay={0.15} className="flex flex-wrap gap-6 text-3xl md:text-4xl mb-8 justify-center md:items-start">
             {icons.map((icon, index) => {
-              return <FadeInChild key={index }>{icon}</FadeInChild>;
+              return <FadeInChild key={index + 100}>{icon}</FadeInChild>;
             })}
           </FadeIn>
           <p className="text-sm opacity-80">
