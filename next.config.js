@@ -4,7 +4,6 @@
 const nextConfig = {
   output: 'export',
   basePath: '/portfolio',
-  assetPrefix: '/portfolio',
 }
  
 module.exports = nextConfig

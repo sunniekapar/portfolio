@@ -20,14 +20,14 @@ export default function Page({
   const navButtons = [{ Icon: FiArrowLeft, label: 'Back', href: '/projects' }];
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-clip">
       <div className="animate-fade-in duration-1000">
         <div className="absolute top-0 h-1/4 w-full bg-[radial-gradient(ellipse_at_top,hsl(var(--accent)),transparent,transparent)] opacity-30 blur-3xl" />
         <div className="absolute -left-20  h-full w-1/4 bg-[radial-gradient(ellipse_at_left,hsl(var(--accent)),transparent,transparent)] opacity-30 blur-3xl" />
         <div className="absolute  -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] opacity-30 blur-3xl" />
       </div>
 
-      <main className="relative z-10 max-w-screen-2xl max-h-min min-h-[100vh] mx-auto px-8 py-16 lg:grid-cols-2 grid justify-center items-center gap-8">
+      <main className="relative z-10 max-w-screen-md max-h-min min-h-[100vh] mx-auto px-8 py-16 lg:grid-cols-2 flex flex-col justify-center items-center gap-8">
         <FadeIn className="max-w-[60ch]">
           <h1 className="text-6xl font-semibold mb-4 flex items-baseline">
             {projectName}.
