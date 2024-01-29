@@ -18,7 +18,6 @@ export default function PageComponent({
   projectPage,
 }: ProjectDataProps) {
   const navButtons = [{ Icon: FiArrowLeft, label: 'Back', href: '/projects' }];
-  console.log(projectPage);
   return (
     <div className="relative overflow-clip">
       <div className="animate-fade-in duration-1000">
@@ -71,7 +70,7 @@ export default function PageComponent({
           <div className="aspect-[4/3] relative rounded-lg group w-full self-center">
             <div className="w-full animate-tilt absolute -inset-0.5 bg-gradient-to-r from-accent to-muted-foreground opacity-100 aspect-auto rounded-lg blur-xl group-hover:opacity-55 transition-opacity" />
             <Image
-              src={`images/${projectPage}.png`}
+              src={`https://sunniekapar.github.io/portfolio/images/${projectPage}.png`}
               alt={imageAlt}
               key={projectPage}
               className="relative rounded-lg aspect-[4/3] pointer-events-none object-cover w-full"
