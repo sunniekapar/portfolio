@@ -75,7 +75,6 @@ export default function Page({
               alt={imageAlt}
               width="650"
               height="488"
-              quality={100}
               className="relative rounded-lg aspect-[4/3] pointer-events-none max-h-full max-w-full object-cover duration-300"
             />
           </div>

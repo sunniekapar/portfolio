@@ -20,7 +20,7 @@ export default function PageComponent() {
           <div className="absolute  -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] opacity-30 blur-3xl" />
         </div>
 
-        <main className="relative z-10 max-w-screen-2xl max-h-min min-h-[100vh] mx-auto px-4 md:px-8 py-16 gap-4 w-[75ch]">
+        <main className="relative z-10 max-w-screen-2xl max-h-min min-h-[100vh] mx-auto px-4 md:px-8 py-16 gap-4">
           <FadeIn className="relative z-10 max-w-screen-md mx-auto">
             <div className="mb-8">
               <h1 className="mb-8 text-5xl font-semibold">Experience.</h1>
