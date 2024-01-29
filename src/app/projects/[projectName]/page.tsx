@@ -1,5 +1,5 @@
 import { projectData } from '@/data';
-import Test from './Test';
+import PageComponent from './PageComponent';
 
 export function generateStaticParams() {
   return projectData.map((project) => {
@@ -10,6 +10,6 @@ export function generateStaticParams() {
 export default function Page({ params }: { params: { projectName: string } }) {
   const project = projectData.find((p) => params.projectName === p.projectPage);
   return (
-    <Test {...project!} />
+    <PageComponent {...project!} />
   );
 }
