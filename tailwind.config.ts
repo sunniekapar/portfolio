@@ -20,7 +20,7 @@ module.exports = {
       gridTemplateColumns: {
         'ten-seven': '1fr 0.65fr',
         'seven-ten': '0.7fr 1fr',
-        'four-ten': '0.4fr 1fr'
+        'four-ten': '0.4fr 1fr',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -106,14 +106,20 @@ module.exports = {
             opacity: '25%',
           },
         },
+        appear: {
+          '0%': { opacity: '0', transform: 'translateY(2rem)' },
+          '25%': { opacity: '0' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'infinite-scroll': 'infinite-scroll 15s linear infinite',
         'fade-in': 'fade-in 2s ease-in-out',
-        'tilt': 'tilt 10s infinite linear',
-        'breathe': 'breathe 10s infinite ease-in-out'
+        tilt: 'tilt 10s infinite linear',
+        breathe: 'breathe 10s infinite ease-in-out',
+        appear: 'appear 0.75s ease-in-out',
       },
     },
   },

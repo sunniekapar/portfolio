@@ -1,8 +1,7 @@
 import BentoCard from '@/components/BentoCard';
-import FadeIn, { FadeInChild } from '@/components/FadeIn';
+import FadeIn from '@/components/FadeIn';
 import ProjectCard from '@/app/_layouts/Projects/components/ProjectCard';
-import { motion } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { projectData } from '@/data';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
@@ -57,31 +56,33 @@ export default function Projects() {
 
   return (
     <>
-      <FadeIn list>
-        <FadeInChild>
-          <BentoCard className="mt-4 !py-6 !px-8">
-            <div className="overflow-hidden flex justify-center gap-8 items-center [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-              <ScrollingText />
-              <ScrollingText />
-              <ScrollingText />
-              <ScrollingText />
-            </div>
-          </BentoCard>
-        </FadeInChild>
+      <FadeIn>
+        <BentoCard className="mt-4 !py-6 !px-8">
+          <div className="overflow-hidden flex justify-center gap-8 items-center [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <ScrollingText />
+            <ScrollingText />
+            <ScrollingText />
+            <ScrollingText />
+          </div>
+        </BentoCard>
 
-        <FadeInChild className="mt-4 min-w-full">
+        <div className="mt-4 min-w-full">
           <div ref={ref} className="keen-slider">
             {projectData.map((project, index) => {
               return (
-                <Link key={index} href={`/projects/${project.projectPage}`} passHref>
+                <Link
+                  key={index}
+                  href={`/projects/${project.projectPage}`}
+                  passHref
+                >
                   <BentoCard className="flex-shrink-0 ease-out bg-cover group aspect-[4/3] !duration-0 bg-gradient-to-br from-primary-foreground to-background keen-slider__slide !p-0 ">
                     <ProjectCard {...project} />
                   </BentoCard>
-                 </Link> 
+                </Link>
               );
             })}
           </div>
-        </FadeInChild>
+        </div>
       </FadeIn>
     </>
   );

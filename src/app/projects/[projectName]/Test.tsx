@@ -1,5 +1,5 @@
-'use client'
-import FadeIn, { FadeInChild } from '@/components/FadeIn';
+'use client';
+import FadeIn from '@/components/FadeIn';
 import NavigationMenu from '@/components/NavigationMenu';
 import SocialButton from '@/components/SocialButton';
 import { ProjectDataProps } from '@/data';
@@ -8,7 +8,15 @@ import { SiGithub } from 'react-icons/si';
 import { FiArrowLeft } from 'react-icons/fi';
 import Image from 'next/image';
 
-export default function Page({ imageAlt, projectDescription, projectName, projectTags, projectExternalLink, projectGithubLink, projectPage }: ProjectDataProps) {
+export default function Page({
+  imageAlt,
+  projectDescription,
+  projectName,
+  projectTags,
+  projectExternalLink,
+  projectGithubLink,
+  projectPage,
+}: ProjectDataProps) {
   const navButtons = [{ Icon: FiArrowLeft, label: 'Back', href: '/projects' }];
 
   return (
@@ -20,8 +28,8 @@ export default function Page({ imageAlt, projectDescription, projectName, projec
       </div>
 
       <main className="relative z-10 max-w-screen-2xl max-h-min min-h-[100vh] mx-auto px-8 py-16 lg:grid-cols-2 grid justify-center items-center gap-8">
-        <FadeIn list className="max-w-[60ch]">
-          <FadeInChild className="text-6xl font-semibold mb-4 flex items-baseline">
+        <FadeIn className="max-w-[60ch]">
+          <h1 className="text-6xl font-semibold mb-4 flex items-baseline">
             {projectName}.
             <span className="ml-8 flex items-center gap-4">
               {projectGithubLink ? (
@@ -39,34 +47,24 @@ export default function Page({ imageAlt, projectDescription, projectName, projec
                 />
               ) : null}
             </span>
-          </FadeInChild>
+          </h1>
 
-          <FadeInChild className="mb-4">
-            <FadeIn
-              list
-              delay={projectTags.length * 0.025}
-              className="flex-wrap *:rounded-full text-teal-50 *:border *:border-white/20 *:bg-accent *:px-3  *:py-1 dark:accent dark:*:border-accent/15 *:text-xs  dark:*:bg-sky-500/10 flex gap-2"
-            >
-              {projectTags.map((tag, index) => {
-                return (
-                  <FadeInChild
-                    key={index}
-                    className="hover:brightness-95 dark:hover:brightness-125"
-                  >
-                    {tag}
-                  </FadeInChild>
-                );
-              })}
-            </FadeIn>
-          </FadeInChild>
+          <FadeIn className="mb-4 flex-wrap *:rounded-full text-teal-50 *:border *:border-white/20 *:bg-accent *:px-3  *:py-1 dark:accent dark:*:border-accent/15 *:text-xs  dark:*:bg-sky-500/10 flex gap-2">
+            {projectTags.map((tag, index) => {
+              return (
+                <div
+                  key={index}
+                  className="hover:brightness-95 dark:hover:brightness-125"
+                >
+                  {tag}
+                </div>
+              );
+            })}
+          </FadeIn>
 
-          <FadeInChild className="mb-8 font-medium">
-            {projectDescription}
-          </FadeInChild>
+          <div className="mb-8 font-medium">{projectDescription}</div>
 
-          <FadeInChild>
-            <NavigationMenu buttons={navButtons} />
-          </FadeInChild>
+          <NavigationMenu buttons={navButtons} />
         </FadeIn>
 
         <FadeIn>

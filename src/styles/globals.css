@@ -129,36 +129,15 @@
   .fade-siblings {
     pointer-events: none;
   }
-  .fade-siblings > *:nth-child(odd) {
+  .fade-siblings > * {
     pointer-events: auto;
-    transition: 300ms opacity;
+    transition: 300ms opacity !important;
   }
-  .fade-siblings:hover > *:nth-child(odd) {
-    opacity: 0.25;
+  .fade-siblings:hover > * {
+    opacity: 0.25 !important; 
   }
 
-  .fade-siblings:hover > *:nth-child(odd):hover {
-    opacity: 1;
-  }
-  .gradient-border-wrapper {
-    position: relative;
-    padding: 1px; /* This padding is effectively the border's width */
-  }
-  
-  .gradient-border-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    right: 0; bottom: 0;
-    z-index: -1;
-    background: linear-gradient(to right, red, yellow); /* Your gradient */
-    border-radius: inherit; /* If the wrapper has a border-radius */
-    padding: 1px; /* Adjust this to modify the visible border width */
-    margin: -1px; /* Pull the pseudo-element to the edges of the wrapper */
-  }
-  
-  .gradient-border-content {
-    background-color: transparent;
-    /* Apply your content styling */
+  .fade-siblings:hover > *:hover {
+    opacity: 1 !important;
   }
 }

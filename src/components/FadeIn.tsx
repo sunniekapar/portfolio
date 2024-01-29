@@ -1,62 +1,74 @@
-import { motion, MotionProps } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React, {
+  JSXElementConstructor,
+  PropsWithChildren,
+  useEffect,
+  useState,
+} from "react";
 
-interface FadeInProps extends MotionProps {
+interface Props {
+  delay?: number;
+  transitionDuration?: number;
+  wrapperTag?: JSXElementConstructor<any>;
+  childTag?: JSXElementConstructor<any>;
   className?: string;
-  delay?: number; // Prop for initial delay
-  list?: boolean; // Prop to indicate if it's a list of items
+  childClassName?: string;
+  visible?: boolean;
+  onComplete?: () => any;
 }
 
-export default function FadeIn({
-  className,
-  delay = 0.35,
-  list,
-  ...props
-}: FadeInProps) {
-  const [forceAnimation, setForceAnimation] = useState(false);
+export default function FadeIn(props: PropsWithChildren<Props>) {
+  const [maxIsVisible, setMaxIsVisible] = useState(0);
+  const transitionDuration = typeof props.transitionDuration === "number" ? props.transitionDuration : 750;
+  const delay = typeof props.delay === "number" ? props.delay : 250;
+  const WrapperTag = props.wrapperTag || "div";
+  const ChildTag = props.childTag || "div";
+  const visible = typeof props.visible === "undefined" ? true : props.visible;
+
   useEffect(() => {
-    setForceAnimation(true);
-  }, []);
+    let count = React.Children.count(props.children);
+    if (!visible) {
+      count = 0;
+    }
 
-  const variants = {
-    hidden: { opacity: 0, y: 32 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: 'easeInOut',
-        duration: 0.75,
-        staggerChildren: list ? delay : 0,
-      },
-    },
-  };
+    if (count == maxIsVisible) {
+      // We're done updating maxVisible, notify when animation is done
+      const timeout = setTimeout(() => {
+        if (props.onComplete) props.onComplete();
+      }, transitionDuration);
+      return () => clearTimeout(timeout);
+    }
+
+    // Move maxIsVisible toward count
+    const increment = count > maxIsVisible ? 1 : -1;
+    const timeout = setTimeout(() => {
+      setMaxIsVisible(maxIsVisible + increment);
+    }, delay);
+    return () => clearTimeout(timeout);
+  }, [
+    React.Children.count(props.children),
+    delay,
+    maxIsVisible,
+    visible,
+    transitionDuration,
+  ]);
 
   return (
-    <motion.div
-      {...props}
-      variants={variants}
-      initial="hidden"
-      animate={forceAnimation ? 'visible' : 'visible'}
-      className={className}
-    />
+    <WrapperTag className={props.className}>
+      {React.Children.map(props.children, (child, i) => {
+        return (
+          <ChildTag
+            className={props.childClassName}
+            style={{
+              animationFillMode: 'backwards',
+              transition: `opacity ${transitionDuration}ms, transform ${transitionDuration}ms `,
+              transform: maxIsVisible > i ? "none" : "translateY(2rem)",
+              opacity: maxIsVisible > i ? 1 : 0,
+            }}
+          >
+            {child}
+          </ChildTag>
+        );
+      })}
+    </WrapperTag>
   );
 }
-
-export const FadeInChild: React.FC<FadeInProps> = (props) => {
-  return (
-    <motion.div
-      {...props}
-      variants={{
-        hidden: { opacity: 0, y: 32 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            ease: 'easeInOut',
-            duration: 0.75,
-          },
-        },
-      }}
-    />
-  );
-};

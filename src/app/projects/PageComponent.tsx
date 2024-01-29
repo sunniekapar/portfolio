@@ -1,6 +1,6 @@
 'use client';
 
-import FadeIn, { FadeInChild } from '@/components/FadeIn';
+import FadeIn from '@/components/FadeIn';
 import ProjectDescription from '@/app/projects/_components/ProjectDescription';
 import { projectData } from '@/data';
 import React from 'react';
@@ -11,7 +11,6 @@ import { HiBriefcase } from 'react-icons/hi';
 import NavigationMenu from '@/components/NavigationMenu';
 
 export default function page() {
-
   const navigationMenuButtons = [
     { Icon: HiMiniHome, label: 'Home', href: '/' },
     { Icon: HiBriefcase, label: 'Experience', href: '/experience' },
@@ -26,7 +25,7 @@ export default function page() {
       </div>
 
       <FadeIn className="relative z-10 max-w-screen-md mx-auto px-8 py-16">
-        <FadeInChild className="mb-8">
+        <div className="mb-8">
           <h1 className="mb-8 text-5xl font-semibold"> Projects.</h1>
 
           <p className="mb-2 font-medium">
@@ -45,21 +44,19 @@ export default function page() {
           </p>
 
           <NavigationMenu buttons={navigationMenuButtons} />
-        </FadeInChild>
+        </div>
 
-        <FadeInChild>
-          <GlowSeparator />
-          <FadeIn list delay={0.1} className="!fade-siblings">
-            {projectData.map((project, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <ProjectDescription {...project} />
-                  <GlowSeparator />
-                </React.Fragment>
-              );
-            })}
-          </FadeIn>
-        </FadeInChild>
+        <GlowSeparator />
+        <FadeIn className="fade-siblings">
+          {projectData.map((project, index) => {
+            return (
+              <React.Fragment key={index}>
+                <ProjectDescription {...project} />
+                <GlowSeparator />
+              </React.Fragment>
+            );
+          })}
+        </FadeIn>
       </FadeIn>
     </main>
   );
