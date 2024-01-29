@@ -14,7 +14,7 @@ export default function ProjectCard({
     <>
       <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover">
         <Image
-          src={`images/${projectPage}.png`}
+          src={`https://sunniekapar.github.io/portfolio/images/${projectPage}.png`}
           alt={imageAlt}
           key={projectPage}
           quality={80}
