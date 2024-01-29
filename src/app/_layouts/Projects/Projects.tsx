@@ -73,11 +73,11 @@ export default function Projects() {
           <div ref={ref} className="keen-slider">
             {projectData.map((project, index) => {
               return (
-                <Link key={index} href={`/projects/${project.projectPage}`}>
+                <Link key={index} href={`/projects/${project.projectPage}`} passHref>
                   <BentoCard className="flex-shrink-0 ease-out bg-cover group aspect-[4/3] !duration-0 bg-gradient-to-br from-primary-foreground to-background keen-slider__slide !p-0 ">
                     <ProjectCard {...project} />
                   </BentoCard>
-                </Link>
+                 </Link> 
               );
             })}
           </div>

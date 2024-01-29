@@ -2,22 +2,15 @@
 
 import FadeIn, { FadeInChild } from '@/components/FadeIn';
 import ProjectDescription from '@/app/projects/_components/ProjectDescription';
-import { Separator } from '@/components/ui/separator';
 import { projectData } from '@/data';
-import React, { useEffect } from 'react';
-import { FaArrowLeft, FaHome } from 'react-icons/fa';
+import React from 'react';
 import GlowSeparator from '@/components/GlowSeparator';
 import Link from 'next/link';
 import { HiMiniHome } from 'react-icons/hi2';
-import { Button } from '@/components/ui/button';
-import { usePathname } from 'next/navigation';
 import { HiBriefcase } from 'react-icons/hi';
 import NavigationMenu from '@/components/NavigationMenu';
 
 export default function page() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const navigationMenuButtons = [
     { Icon: HiMiniHome, label: 'Home', href: '/' },
@@ -42,13 +35,13 @@ export default function page() {
           </p>
           <p className="mb-8 text-muted-foreground text-sm">
             View all projects on{' '}
-            <a
+            <Link
               className="font-semibold underline-offset-4 underline cursor-pointer"
               href="https://github.com/sunniekapar"
               target="_blank"
             >
               GitHub.
-            </a>
+            </Link>
           </p>
 
           <NavigationMenu buttons={navigationMenuButtons} />
@@ -59,10 +52,10 @@ export default function page() {
           <FadeIn list delay={0.1} className="!fade-siblings">
             {projectData.map((project, index) => {
               return (
-                <>
-                  <ProjectDescription key={index} {...project} />
+                <React.Fragment key={index}>
+                  <ProjectDescription {...project} />
                   <GlowSeparator />
-                </>
+                </React.Fragment>
               );
             })}
           </FadeIn>

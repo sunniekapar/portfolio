@@ -45,7 +45,7 @@ export default function Details() {
           </p>
           <FadeIn list delay={0.15} className="flex flex-wrap gap-6 text-3xl md:text-4xl mb-8 justify-center md:items-start">
             {icons.map((icon, index) => {
-              return <FadeInChild key={index}>{icon}</FadeInChild>;
+              return <FadeInChild key={index }>{icon}</FadeInChild>;
             })}
           </FadeIn>
           <p className="text-sm opacity-80">

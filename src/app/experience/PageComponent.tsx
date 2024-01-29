@@ -3,14 +3,11 @@ import FadeIn, { FadeInChild } from '@/components/FadeIn';
 import GlowSeparator from '@/components/GlowSeparator';
 import NavigationMenu from '@/components/NavigationMenu';
 import { HiMiniHome, HiMiniFolder } from 'react-icons/hi2';
-import ExperienceCard from './ExperienceCard';
+import ExperienceCard from './_components/ExperienceCard';
 import { useEffect } from 'react';
 import Link from 'next/link';
 
 export default function PageComponent() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const navigationMenuButtons = [
     { Icon: HiMiniHome, label: 'Home', href: '/' },
@@ -32,12 +29,12 @@ export default function PageComponent() {
               <p className="mb-4 font-medium">
                 You can learn more about me on{' '}
                 <span className="font-semibold underline underline-offset-2 italic">
-                  <a
+                  <Link
                     target="_blank"
                     href="https://linkedin.com/in/sunnie-kapar"
                   >
                     Linkedin
-                  </a>
+                  </Link>
                 </span>{' '}
                 or check out my{' '}
                 <span className="font-semibold underline underline-offset-2 italic">

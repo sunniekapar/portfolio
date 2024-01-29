@@ -13,11 +13,11 @@ export default function ProjectDescription({
   projectName,
   projectShortDescription,
   imageAlt,
-}: ProjectDescriptionProps) {
+}: ProjectDescriptionProps, ref: React.ForwardedRef<HTMLDivElement>) {
   return (
     <FadeInChild>
       <BentoCard className="!p-2 rounded-3xl">
-        <Link href={`/projects/${projectPage}`}>
+        <Link href={`/projects/${projectPage}`} passHref>
           <FadeIn
             list
             className="flex flex-col sm:grid sm:grid-cols-four-ten gap-4 group hover:cursor-pointer"

@@ -38,7 +38,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
         <div className="absolute  -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] opacity-30 blur-3xl" />
       </div>
 
-      <main className="relative z-10 max-w-screen-2xl max-h-min min-h-[100vh] mx-auto px-8 py-16 md:grid-cols-2 grid items-center gap-8">
+      <main className="relative z-10 max-w-screen-2xl max-h-min min-h-[100vh] mx-auto px-8 py-16 lg:grid-cols-2 grid justify-center items-center gap-8">
         <FadeIn list className="max-w-[60ch]">
           <FadeInChild className="text-6xl font-semibold mb-4 flex items-baseline">
             {projectName}.

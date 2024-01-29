@@ -3,8 +3,9 @@ import React from 'react';
 import FadeIn, { FadeInChild } from '@/components/FadeIn';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 import { HiMenuAlt3 } from 'react-icons/hi';
-import NavLink from './components/NavLink';
 import ThemeToggle from '@/components/ThemeToggle';
+import NavLink from './components/NavLink';
+import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
   const NavLinks = () => {
@@ -34,7 +35,9 @@ export default function Navbar() {
 
         <Sheet>
           <SheetTrigger className="md:hidden" asChild>
-            <HiMenuAlt3 className="text-3xl" />
+            <Button variant='ghost' size='icon'>
+              <HiMenuAlt3 className="text-3xl" />
+            </Button>
           </SheetTrigger>
           <SheetContent className="bg-background/95 md:hidden w-2/3">
             <FadeIn

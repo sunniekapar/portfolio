@@ -1,4 +1,4 @@
-import PageComponent from "./_components/PageComponent";
+import PageComponent from "./PageComponent";
 
 export const metadata = {
   title: 'Experience | Sunnie Kapar',
