@@ -10,10 +10,10 @@ import { Button } from '@/components/ui/button';
 export default function Navbar() {
   const NavLinks = () => {
     return (
-      <>
+      <div className="h-full flex flex-col gap-8 text-2xl items-center justify-center">
         <NavLink name="Projects." href="/projects" />
         <NavLink name="Experience." href="/experience" />
-      </>
+      </div>
     );
   };
   return (
@@ -32,7 +32,7 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent className="bg-background/95 md:hidden w-2/3">
-            <FadeIn className="h-full flex flex-col gap-8 text-2xl items-center justify-center">
+            <FadeIn>
               <NavLinks />
             </FadeIn>
           </SheetContent>

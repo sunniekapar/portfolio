@@ -12,9 +12,9 @@ export default function Projects() {
 
   const updateSlidesPerView = () => {
     const width = window.innerWidth;
-    if (width < 600) {
+    if (width < 640) {
       setSlidesPerView(1); // For small screens
-    } else if (width < 900) {
+    } else if (width < 1024) {
       setSlidesPerView(2); // For medium screens
     } else {
       setSlidesPerView(3); // For large screens
@@ -22,13 +22,10 @@ export default function Projects() {
   };
 
   useEffect(() => {
-    // Update slides per view based on initial window size
     updateSlidesPerView();
 
-    // Event listener for window resize
     window.addEventListener('resize', updateSlidesPerView);
 
-    // Cleanup event listener
     return () => {
       window.removeEventListener('resize', updateSlidesPerView);
     };
