@@ -10,10 +10,10 @@ import { Button } from '@/components/ui/button';
 export default function Navbar() {
   const NavLinks = () => {
     return (
-      <div className="h-full flex md:flex-row flex-col gap-8 items-center justify-center">
+      <>
         <NavLink name="Projects." href="/projects" />
         <NavLink name="Experience." href="/experience" />
-      </div>
+      </>
     );
   };
   return (
@@ -31,10 +31,8 @@ export default function Navbar() {
               <HiMenuAlt3 className="text-3xl" />
             </Button>
           </SheetTrigger>
-          <SheetContent className="h-full bg-background/95 md:hidden w-2/3">
-            <FadeIn className="h-full">
-              <NavLinks />
-            </FadeIn>
+          <SheetContent className="flex md:flex-row flex-col gap-8 items-center justify-center h-full bg-background/95 md:hidden w-2/3">
+            <NavLinks />
           </SheetContent>
         </Sheet>
       </BentoCard>
