@@ -71,7 +71,7 @@ export default function Page({
           <div className="aspect-[4/3] relative rounded-lg group w-fit self-center">
             <div className="animate-tilt absolute -inset-0.5 bg-gradient-to-r from-accent to-muted-foreground opacity-100 aspect-auto rounded-lg blur-xl group-hover:opacity-55 transition-opacity" />
             <Image
-              src={`/images/${projectPage}.png`}
+              src={`images/${projectPage}.png`}
               alt={imageAlt}
               width="650"
               height="488"
