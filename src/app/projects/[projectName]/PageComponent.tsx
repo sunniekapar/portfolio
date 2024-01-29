@@ -18,7 +18,7 @@ export default function PageComponent({
   projectPage,
 }: ProjectDataProps) {
   const navButtons = [{ Icon: FiArrowLeft, label: 'Back', href: '/projects' }];
-
+  console.log(projectPage);
   return (
     <div className="relative overflow-clip">
       <div className="animate-fade-in duration-1000">
