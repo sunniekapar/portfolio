@@ -1,5 +1,5 @@
-import {  motion, MotionProps } from 'framer-motion';
-import React from 'react';
+import { motion, MotionProps } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
 
 interface FadeInProps extends MotionProps {
   className?: string;
@@ -13,6 +13,11 @@ export default function FadeIn({
   list,
   ...props
 }: FadeInProps) {
+  const [forceAnimation, setForceAnimation] = useState(false);
+  useEffect(() => {
+    setForceAnimation(true);
+  }, []);
+
   const variants = {
     hidden: { opacity: 0, y: 32 },
     visible: {
@@ -31,15 +36,20 @@ export default function FadeIn({
       {...props}
       variants={variants}
       initial="hidden"
-      animate="visible"
+      animate={forceAnimation ? 'visible' : 'visible'}
       className={className}
     />
   );
 }
 
 export const FadeInChild: React.FC<FadeInProps> = (props) => {
+  const [forceAnimation, setForceAnimation] = useState(false);
+  useEffect(() => {
+    setForceAnimation(true);
+  }, []);
   return (
     <motion.div
+      animate={forceAnimation ? 'visible' : 'visible'}
       {...props}
       variants={{
         hidden: { opacity: 0, y: 32 },
