@@ -1,26 +1,14 @@
-'use client';
-
+'use client'
 import FadeIn, { FadeInChild } from '@/components/FadeIn';
 import NavigationMenu from '@/components/NavigationMenu';
 import SocialButton from '@/components/SocialButton';
-import { projectData } from '@/data';
+import { ProjectDataProps } from '@/data';
 import { FiExternalLink } from 'react-icons/fi';
 import { SiGithub } from 'react-icons/si';
 import { FiArrowLeft } from 'react-icons/fi';
 import Image from 'next/image';
 
-export default function PageComponent({ params }: { params: { projectName: string } }) {
-  const project = projectData.find((p) => params.projectName === p.projectPage);
-  const {
-    imageAlt,
-    projectDescription,
-    projectName,
-    projectTags,
-    projectExternalLink,
-    projectGithubLink,
-    projectPage,
-  } = project!;
-
+export default function Page({ imageAlt, projectDescription, projectName, projectTags, projectExternalLink, projectGithubLink, projectPage }: ProjectDataProps) {
   const navButtons = [{ Icon: FiArrowLeft, label: 'Back', href: '/projects' }];
 
   return (

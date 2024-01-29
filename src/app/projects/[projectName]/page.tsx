@@ -1,5 +1,6 @@
-import { projectData } from "@/data";
-import PageComponent from "./PageComponent";
+import { projectData } from '@/data';
+import { notFound } from 'next/navigation';
+import Test from './Test';
 
 export function generateStaticParams() {
   return projectData.map((project) => {
@@ -10,8 +11,15 @@ export function generateStaticParams() {
     };
   });
 }
-export default function page({ params }: { params: { projectName: string } }) {
+
+export default function Page({ params }: { params: { projectName: string } }) {
+  const allPaths = generateStaticParams();
+  const isValidPath = allPaths.some(
+    (path) => path.params.projectName === params.projectName
+  );
+  if (!isValidPath) notFound();
+  const project = projectData.find((p) => params.projectName === p.projectPage);
   return (
-    <PageComponent params={params} />
-  )
+    <Test {...project!} />
+  );
 }
