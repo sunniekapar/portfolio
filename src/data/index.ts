@@ -83,12 +83,4 @@ export const projectData: ProjectDataProps[] = [
   },
 ];
 
-export function generateStaticParams() {
-  return projectData.map((project) => {
-    return {
-      params: {
-        projectName: project.projectPage,
-      },
-    };
-  });
-}
+
