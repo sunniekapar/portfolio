@@ -16,7 +16,7 @@ export default function ProjectDescription({
 }: ProjectDescriptionProps) {
   return (
     <BentoCard className="!p-2 rounded-3xl">
-      <Link href={`/projects/${projectPage}`} passHref>
+      <Link href={`/projects/${projectPage}`}>
         <FadeIn className="flex flex-col sm:grid sm:grid-cols-four-ten gap-4 group hover:cursor-pointer">
           <div className="aspect-video lg:aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover">
             <Image
