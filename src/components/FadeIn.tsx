@@ -43,13 +43,8 @@ export default function FadeIn({
 }
 
 export const FadeInChild: React.FC<FadeInProps> = (props) => {
-  const [forceAnimation, setForceAnimation] = useState(false);
-  useEffect(() => {
-    setForceAnimation(true);
-  }, []);
   return (
     <motion.div
-      animate={forceAnimation ? 'visible' : 'visible'}
       {...props}
       variants={{
         hidden: { opacity: 0, y: 32 },
