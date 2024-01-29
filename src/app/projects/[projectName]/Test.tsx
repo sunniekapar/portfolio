@@ -27,7 +27,7 @@ export default function Page({
         <div className="absolute  -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] opacity-30 blur-3xl" />
       </div>
 
-      <main className="relative z-10 max-w-screen-md max-h-min min-h-[100vh] mx-auto px-8 py-16 lg:grid-cols-2 flex flex-col justify-center items-center gap-8">
+      <main className="relative z-10 max-w-screen-md lg:max-w-screen-lg max-h-min min-h-[100vh] mx-auto px-8 py-16 lg:grid-cols-2 flex flex-col justify-center items-center gap-8">
         <FadeIn className="max-w-[60ch]">
           <h1 className="text-6xl font-semibold mb-4 flex items-baseline">
             {projectName}.
@@ -75,7 +75,7 @@ export default function Page({
               alt={imageAlt}
               width="650"
               height="488"
-              className="relative rounded-lg aspect-[4/3] pointer-events-none max-h-full max-w-full object-cover duration-300"
+              className="relative rounded-lg aspect-[4/3] pointer-events-none object-cover max-h-full max-w-full min-w-full min-h-full duration-300"
             />
           </div>
         </FadeIn>
