@@ -49,7 +49,7 @@ export default function PageComponent() {
               <ExperienceCard
                 jobTitle={'Lead Frontend Developer'}
                 jobDate={'Dec. 2022'}
-                jobImage={'images/frontend.png'}
+                jobImage={'frontend.png'}
                 jobDescription={[
                   'I was the lead frontend developer for Craig Kielburger Secondary School, where I mentored and taught my peers basic frontend skills.',
                   'During this time, I created my first-ever project called Druiven Box, for over 100 kids in the Halton District School Board computer engineering program.',

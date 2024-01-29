@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 export default function Navbar() {
   const NavLinks = () => {
     return (
-      <div className="h-full flex md:flex-row flex-col gap-8 text-2xl items-center justify-center">
+      <div className="h-full flex md:flex-row flex-col gap-8 items-center justify-center">
         <NavLink name="Projects." href="/projects" />
         <NavLink name="Experience." href="/experience" />
       </div>
