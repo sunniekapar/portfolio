@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       <main className="relative z-10 max-w-screen-2xl mx-auto px-4 lg:px-8 py-16">
-        <FadeIn list>
+        <FadeIn list >
           <FadeInChild>
             <Navbar />
           </FadeInChild>
