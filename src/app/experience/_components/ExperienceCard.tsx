@@ -27,6 +27,8 @@ export default function ExperienceCard({
           <Image
             src={jobImage}
             alt={jobTitle}
+            width={600}
+            height={300}
             quality={80}
             className="aspect-[2/1] rounded-xl min-w-full min-h-full object-cover"
           />

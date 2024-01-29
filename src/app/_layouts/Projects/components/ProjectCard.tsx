@@ -18,6 +18,8 @@ export default function ProjectCard({
           alt={imageAlt}
           key={projectPage}
           quality={80}
+          width={500}
+          height={375}
           priority
           className="aspect-[4/3] pointer-events-none min-h-full min-w-full !object-cover duration-300 scale-100 brightness-90 select-none group-hover:scale-105 group-hover:brightness-[20%]"
         />

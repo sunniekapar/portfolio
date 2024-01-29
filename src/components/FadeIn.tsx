@@ -62,6 +62,7 @@ export default function FadeIn(props: PropsWithChildren<Props>) {
               animationFillMode: 'backwards',
               transition: `opacity ${transitionDuration}ms, transform ${transitionDuration}ms `,
               transform: maxIsVisible > i ? "none" : "translateY(2rem)",
+              WebkitTransform: maxIsVisible > i ? "none" : "translateY(2rem)",
               opacity: maxIsVisible > i ? 1 : 0,
             }}
           >

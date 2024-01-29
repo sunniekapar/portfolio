@@ -26,8 +26,8 @@ export default function PageComponent({
         <div className="absolute  -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] opacity-30 blur-3xl" />
       </div>
 
-      <main className="relative z-10 max-w-screen-md lg:max-w-screen-lg max-h-min min-h-[100vh] mx-auto px-4 lg:px-8 py-16 grid lg:grid-cols-2 justify-center items-center gap-x-16 gap-8">
-        <FadeIn className="max-w-[60ch]">
+      <main className="relative z-10 max-h-min min-h-[100vh] mx-auto px-4 lg:px-8 py-16 grid lg:grid-cols-2 justify-center items-center gap-8">
+        <FadeIn className="max-w-[60ch] place-self-center">
           <div className="flex flex-wrap items-baseline mb-4 gap-8">
             <h1 className="text-6xl font-semibold ">{projectName}.</h1>
             <span className="flex items-center gap-4">
@@ -67,13 +67,15 @@ export default function PageComponent({
         </FadeIn>
 
         <FadeIn className="w-full">
-          <div className="aspect-[4/3] relative rounded-lg group w-full self-center">
+          <div className="aspect-[4/3] relative rounded-lg group w-fit self-center">
             <div className="w-full animate-tilt absolute -inset-0.5 bg-gradient-to-r from-accent to-muted-foreground opacity-100 aspect-auto rounded-lg blur-xl group-hover:opacity-55 transition-opacity" />
             <Image
               src={`https://sunniekapar.github.io/portfolio/images/${projectPage}.png`}
               alt={imageAlt}
               key={projectPage}
-              className="relative rounded-lg aspect-[4/3] pointer-events-none object-cover w-full"
+              width={600}
+              height={450}
+              className="relative max-w-fit rounded-lg aspect-[4/3] pointer-events-none object-cover w-full"
             />
           </div>
         </FadeIn>

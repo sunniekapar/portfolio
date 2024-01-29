@@ -18,13 +18,15 @@ export default function ProjectDescription({
     <BentoCard className="!p-2 rounded-3xl">
       <Link href={`/projects/${projectPage}`}>
         <FadeIn className="flex flex-col sm:grid sm:grid-cols-four-ten gap-4 group hover:cursor-pointer">
-          <div className="aspect-video lg:aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover">
+          <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover">
             <Image
               src={`https://sunniekapar.github.io/portfolio/images/${projectPage}.png`}
               alt={imageAlt}
               quality={80}
+              width={300}
+              height={225}
               key={projectPage}
-              className="aspect-video lg:aspect-[4/3] object-cover rounded-lg max-h-full max-w-full min-w-full min-h-full"
+              className="aspect-[4/3] object-cover rounded-lg max-h-full max-w-full min-w-full min-h-full"
             />
           </div>
 
