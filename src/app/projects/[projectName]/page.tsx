@@ -1,9 +1,10 @@
 import { projectData } from '@/data';
-import { notFound } from 'next/navigation';
 import Test from './Test';
 
 export function generateStaticParams() {
-   return [{ projectName: '1' }, { projectName: '2' }, { projectName: '3' }]
+  return projectData.map((project) => {
+    return { projectName: project.projectPage };
+  });
 }
 
 export default function Page({ params }: { params: { projectName: string } }) {
