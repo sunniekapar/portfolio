@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <link rel="icon" href="images/favicon.ico" sizes="any" />
+      <link rel="icon" href="/images/favicon.ico" sizes="any" />
 
       <body className={`${inter.className}`}>
         <ThemeProvider

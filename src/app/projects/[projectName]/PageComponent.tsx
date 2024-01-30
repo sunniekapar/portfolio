@@ -70,7 +70,7 @@ export default function PageComponent({
           <div className="aspect-[4/3] relative rounded-lg group w-fit self-center">
             <div className="w-full animate-tilt absolute -inset-0.5 bg-gradient-to-r from-accent to-muted-foreground opacity-100 aspect-auto rounded-lg blur-xl group-hover:opacity-55 transition-opacity" />
             <Image
-              src={`https://sunniekapar.github.io/portfolio/images/${projectPage}.png`}
+              src={`/images/${projectPage}-compressed.jpg`}
               alt={imageAlt}
               key={projectPage}
               width={600}

@@ -18,8 +18,8 @@ export const projectData: ProjectDataProps[] = [
     projectPage: 'solfocus',
     projectName: 'SolFocus',
     projectDescription:
-      'SolFocus is a minimalistic productivity app designed for students. It utilizes the Pomodoro Technique with a task management system that allows students to track their progress throughout their study session.',
-    projectShortDescription: 'A minimalistic productivity study app',
+      'SolFocus is a minimalistic productivity web app designed for students. It utilizes the Pomodoro Technique with a task management system that allows students to track their progress throughout their study session.',
+    projectShortDescription: 'A minimalistic productivity study web app',
     projectDate: 'Dec. 2023',
     projectGithubLink: 'https://github.com/sunniekapar/solfocus',
     imageSrc: 'https://source.unsplash.com/random/?MinimalRender&1',

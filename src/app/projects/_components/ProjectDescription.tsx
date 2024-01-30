@@ -20,7 +20,7 @@ export default function ProjectDescription({
         <FadeIn className="flex flex-col sm:grid sm:grid-cols-four-ten gap-4 group hover:cursor-pointer">
           <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover">
             <Image
-              src={`https://sunniekapar.github.io/portfolio/images/${projectPage}.png`}
+              src={`/images/${projectPage}.png`}
               alt={imageAlt}
               quality={80}
               width={300}

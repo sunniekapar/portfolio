@@ -3,9 +3,9 @@
  */
 const nextConfig = {
   // output: 'export',
-  images: {
-    domains: ['sunniekapar.github.io']
-  },
+  // images: {
+  //   domains: ['sunniekapar.github.io']
+  // },
 }
  
 module.exports = nextConfig

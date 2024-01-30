@@ -25,7 +25,7 @@ export default function ExperienceCard({
       <BentoCard className="aspect-[2/1] rounded-3xl mb-8 !p-4 ">
         <div className="aspect-[2/1] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover mb-8">
           <Image
-            src={`https://sunniekapar.github.io/portfolio/images/${jobImage}`}
+            src={`/images${jobImage}`}
             alt={jobTitle}
             width={600}
             height={300}
