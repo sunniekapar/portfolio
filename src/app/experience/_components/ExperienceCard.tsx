@@ -22,7 +22,7 @@ export default function ExperienceCard({
         {jobTitle}{' '}
         <span className="text-muted-foreground italic inline-block">— {jobDate}</span>
       </h2>
-      <BentoCard className="aspect-[2/1] rounded-3xl mb-8 !p-4 ">
+      <BentoCard className="rounded-3xl mb-8 !p-4 ">
         <div className="aspect-[2/1] w-full overflow-hidden rounded-xl bg-gradient-to-br from-background to-transparent bg-cover mb-8">
           <Image
             src={`/images/${jobImage}.png`}
