@@ -11,18 +11,20 @@ import {
   SiFirebase,
   SiTypescript,
   SiTailwindcss,
+  SiSupabase,
 } from 'react-icons/si';
 
 export default function Details() {
   const icons = [
-    <SiMongodb key="SiMongodb" />,
-    <SiExpress key="SiExpress" />,
     <SiReact key="SiReact" />,
-    <SiNodedotjs key="SiNodedotjs" />,
-    <SiExpo key="SiExpo" />,
-    <SiNextdotjs key="SiNextdotjs" />,
-    <SiFirebase key="SiFirebase" />,
     <SiTypescript key="SiTypescript" />,
+    <SiNextdotjs key="SiNextdotjs" />,
+    <SiExpo key="SiExpo" />,
+    <SiNodedotjs key="SiNodedotjs" />,
+    <SiExpress key="SiExpress" />,
+    <SiMongodb key="SiMongodb" />,
+    <SiFirebase key="SiFirebase" />,
+    <SiSupabase key="SiSupabase" />,
     <SiTailwindcss key="SiTailwindcss" />,
   ];
   return (

@@ -61,7 +61,7 @@ export default function PageComponent({
             })}
           </FadeIn>
 
-          <div className="mb-8 font-medium">{projectDescription}</div>
+          <div className="mb-8">{projectDescription}</div>
 
           <NavigationMenu buttons={navButtons} />
         </FadeIn>
@@ -71,6 +71,7 @@ export default function PageComponent({
             <div className="w-full animate-tilt absolute -inset-0.5 bg-gradient-to-r from-accent to-muted-foreground opacity-100 aspect-auto rounded-lg blur-xl group-hover:opacity-55 transition-opacity" />
             <Image
               src={`/images/${projectPage}-compressed.jpg`}
+              quality={100}
               alt={imageAlt}
               key={projectPage}
               width={600}

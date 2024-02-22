@@ -15,6 +15,28 @@ export interface ProjectDataProps {
 export const projectData: ProjectDataProps[] = [
   {
     id: '0',
+    projectPage: 'eco',
+    projectName: 'eco',
+    projectDescription:
+      "eco leverages advanced Computer Vision technology, powered by YOLOv8 and OpenCV, to detect fruits, vegetables, and groceries while accurately predicting their expiry dates. The app includes a Discord bot that notifies users of impending expirations and alerts them about unused groceries. Users can easily generate delicious recipes using OpenAI's API, utilizing ingredients from their fridge. Additionally, eco features a Shameboard to track and highlight instances of food waste, encouraging community members to take responsibility for their consumption habits.",
+    projectShortDescription: 'A computer vision model that detects food expiry dates',
+    projectDate: 'Feb. 2024',
+    imageSrc: 'https://source.unsplash.com/random/?MinimalRender&0',
+    imageAlt: 'eco image',
+    projectExternalLink: 'https://devpost.com/software/eco-3c258d',
+    projectGithubLink: 'https://github.com/sunniekapar/eco',
+    projectTags: [
+      'YOLOv8',
+      'OpenCV',
+      'Discord.js',
+      'OpenAI',
+      'Supabase',
+      'TailwindCSS',
+      'Shadcn',
+    ],
+  },
+  {
+    id: '0',
     projectPage: 'solfocus',
     projectName: 'SolFocus',
     projectDescription:
@@ -82,5 +104,3 @@ export const projectData: ProjectDataProps[] = [
     projectTags: ['Flask', 'Expo', 'NativeWind'],
   },
 ];
-
-

@@ -31,14 +31,49 @@ export default function Projects() {
     };
   }, []);
 
-  const [ref] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    mode: 'free',
-    slides: {
-      perView: slidesPerView,
-      spacing: 16,
+  const [ref] = useKeenSlider<HTMLDivElement>(
+    {
+      loop: true,
+      mode: 'free',
+      slides: {
+        perView: slidesPerView,
+        spacing: 16,
+      },
+      defaultAnimation: {
+        duration: 1500,
+      }
     },
-  });
+    [
+      (slider) => {
+        let timeout : any;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 7500);
+        }
+        slider.on('created', () => {
+          slider.container.addEventListener('mouseover', () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener('mouseout', () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on('dragStarted', clearNextTimeout);
+        slider.on('animationEnded', nextTimeout);
+        slider.on('updated', nextTimeout);
+      },
+    ]
+  );
 
   const ScrollingText = () => {
     return (
@@ -71,7 +106,7 @@ export default function Projects() {
                   key={index}
                   href={`/projects/${project.projectPage}`}
                   passHref
-                  className='keen-slider__slide'
+                  className="keen-slider__slide"
                 >
                   <BentoCard className="flex-shrink-0 ease-out bg-cover group aspect-[4/3] !duration-0 bg-gradient-to-br from-primary-foreground to-background !p-0 ">
                     <ProjectCard {...project} />
