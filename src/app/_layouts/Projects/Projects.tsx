@@ -71,8 +71,9 @@ export default function Projects() {
                   key={index}
                   href={`/projects/${project.projectPage}`}
                   passHref
+                  className='keen-slider__slide'
                 >
-                  <BentoCard className="flex-shrink-0 ease-out bg-cover group aspect-[4/3] !duration-0 bg-gradient-to-br from-primary-foreground to-background keen-slider__slide !p-0 ">
+                  <BentoCard className="flex-shrink-0 ease-out bg-cover group aspect-[4/3] !duration-0 bg-gradient-to-br from-primary-foreground to-background !p-0 ">
                     <ProjectCard {...project} />
                   </BentoCard>
                 </Link>
