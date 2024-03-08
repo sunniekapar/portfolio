@@ -91,16 +91,16 @@ export const projectData: ProjectDataProps[] = [
     imageAlt: 'Druiven Box Image',
     projectTags: ['TypeScript', 'HTML', 'SCSS', 'Snowpack'],
   },
-  {
-    id: '0',
-    projectPage: 'falldetection',
-    projectName: 'Fall Detection',
-    projectDescription:
-      "Our team is in the process of developing a mobile app that uses machine learning to detect falls. This application aims to improve personal safety by quickly recognizing fall incidents. It's a work in progress, with a focus on simplicity and effectiveness for the user. More details will be available soon.",
-    projectShortDescription: 'A mobile app that detects falling',
-    projectDate: 'Dec. 2023',
-    imageSrc: 'https://source.unsplash.com/random/?MinimalRender&0',
-    imageAlt: 'Fall detection Image',
-    projectTags: ['Flask', 'Expo', 'NativeWind'],
-  },
+  // {
+  //   id: '0',
+  //   projectPage: 'falldetection',
+  //   projectName: 'Fall Detection',
+  //   projectDescription:
+  //     "Our team is in the process of developing a mobile app that uses machine learning to detect falls. This application aims to improve personal safety by quickly recognizing fall incidents. It's a work in progress, with a focus on simplicity and effectiveness for the user. More details will be available soon.",
+  //   projectShortDescription: 'A mobile app that detects falling',
+  //   projectDate: 'Dec. 2023',
+  //   imageSrc: 'https://source.unsplash.com/random/?MinimalRender&0',
+  //   imageAlt: 'Fall detection Image',
+  //   projectTags: ['Flask', 'Expo', 'NativeWind'],
+  // },
 ];
