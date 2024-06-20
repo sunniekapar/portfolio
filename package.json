@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "npx prettier . --write"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
@@ -17,10 +18,11 @@
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
-    "embla-carousel-react": "^8.0.0-rc19",
-    "framer-motion": "^10.12.4",
+    "embla-carousel-autoplay": "^8.1.5",
+    "embla-carousel-react": "^8.1.5",
+    "framer-motion": "^10.18.0",
     "keen-slider": "^6.8.6",
-    "next": "14.0.4",
+    "next": "^14.2.4",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
@@ -36,6 +38,8 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "postcss": "^8",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

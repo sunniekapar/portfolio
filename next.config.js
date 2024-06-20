@@ -6,6 +6,6 @@ const nextConfig = {
   // images: {
   //   domains: ['sunniekapar.github.io']
   // },
-}
- 
-module.exports = nextConfig
+};
+
+module.exports = nextConfig;
