@@ -56,7 +56,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   const cleanTitle = clean(title);
   return (
     <>
-      <div className="animate-background ease-smooth pointer-events-none absolute left-0 top-0 h-full w-full overflow-clip opacity-15 duration-1000">
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-full animate-background overflow-clip opacity-15 duration-1000 ease-smooth">
         <div className="absolute top-0 h-1/4 w-full bg-[radial-gradient(ellipse_at_top,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
         <div className="absolute -left-20 h-full w-1/4 bg-[radial-gradient(ellipse_at_left,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
@@ -82,7 +82,10 @@ export default function Page({ params }: { params: { slug: string } }) {
             </span>
           </div>
 
-          <FadeIn staggerChildren={0.1} className="mb-4 flex flex-wrap gap-2 *:rounded-full *:border *:border-white/20 *:bg-accent-foreground *:px-3 *:py-1 *:text-xs">
+          <FadeIn
+            staggerChildren={0.1}
+            className="mb-4 flex flex-wrap gap-2 *:rounded-full *:border *:border-white/20 *:bg-accent-foreground *:px-3 *:py-1 *:text-xs"
+          >
             {tags.map((tag, index) => (
               <div
                 key={index}
@@ -98,7 +101,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           <NavigationMenu buttons={navButtons} />
         </FadeIn>
 
-        <div className="animate-appear duration-1000 ease-smooth relative aspect-[4/3] w-full max-w-[600px] place-self-center rounded-lg">
+        <div className="relative aspect-[4/3] w-full max-w-[600px] animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
           <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent to-accent-foreground opacity-100 blur-xl" />
           <Image
             src={`/images/projects/${cleanTitle}.jpg`}

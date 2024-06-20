@@ -22,7 +22,7 @@ export default function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <FadeIn>
-      <div className="relative aspect-[2/1] mb-10">
+      <div className="relative aspect-[2/1] mb-5">
         <Image
           src={`/images/experience/${href}.jpg`}
           alt={role}
@@ -30,8 +30,8 @@ export default function ExperienceCard({
           className="relative rounded-lg object-cover"
         />
       </div>
-      <div className="flex flex-col gap-5 md:flex-row ">
-        <div className=''>
+      <div className="flex flex-col gap-2.5 md:gap-5 md:flex-row ">
+        <div>
           <h2 className="text-2xl font-semibold">{role}</h2>
           <h4 className="text-base font-medium italic text-accent-foreground">
             {company} — {date}

@@ -2,8 +2,8 @@ import BentoCard from "@/components/bento-card";
 
 export default function Hero() {
   return (
-    <BentoCard className="group text-center md:text-left">
-      <h1 className="font-semibold leading-tight tracking-tighter">
+    <BentoCard className="group text-center md:text-left grid">
+      <h1 className="font-semibold leading-tight tracking-tighter place-self-center">
         <span className="mb-2 inline-block text-4xl sm:text-5xl md:text-6xl">
           Sunnie Kapar
         </span>

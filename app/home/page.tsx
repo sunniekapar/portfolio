@@ -17,11 +17,11 @@ export default function page() {
       <Template className="space-y-2.5">
         <FadeIn className="space-y-2.5">
           <Navbar />
-          <FadeIn className="grid gap-2.5 xl:grid-cols-ten-seven">
+          <FadeIn className="grid gap-2.5 lg:grid-cols-ten-seven">
             <Hero />
             <Socials />
           </FadeIn>
-          <FadeIn className="grid gap-2.5 xl:grid-cols-seven-ten">
+          <FadeIn className="grid gap-2.5 lg:grid-cols-seven-ten">
             <AboutMe />
             <Technologies />
           </FadeIn>
