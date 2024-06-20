@@ -15,8 +15,8 @@ export default function page() {
     <>
       <Background />
       <Template className="space-y-2.5">
-        <Navbar />
         <FadeIn className="space-y-2.5">
+          <Navbar />
           <FadeIn className="grid gap-2.5 xl:grid-cols-ten-seven">
             <Hero />
             <Socials />

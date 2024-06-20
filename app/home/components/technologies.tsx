@@ -27,7 +27,7 @@ const icons = [
 
 export default function Technologies() {
   return (
-    <BentoCard className="relative flex w-full flex-col items-center justify-between md:items-start ">
+    <BentoCard className="relative flex w-full flex-col items-center justify-between md:items-start">
       <h2 className="mb-6 text-2xl font-semibold leading-tight sm:text-3xl">
         What I like to use.
       </h2>
@@ -36,7 +36,7 @@ export default function Technologies() {
           return (
             <div key={icon.key} className="group">
               {icon}
-              <span className="absolute -right-5 -bottom-5 text-[150px] text-accent-foreground opacity-0 duration-200 hover:!opacity-0 group-hover:opacity-15">
+              <span className="pointer-events-none absolute -bottom-5 -right-5 text-[150px] text-accent-foreground opacity-0 duration-200 group-hover:opacity-15">
                 {icon}
               </span>
             </div>

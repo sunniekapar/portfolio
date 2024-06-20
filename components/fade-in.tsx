@@ -15,10 +15,10 @@ export default function FadeIn({
   ...props
 }: FadeInProps) {
   const container = {
-    hidden: { opacity: 0, y: 32 },
+    hidden: { opacity: 0, transform: 'translateY(32px)' },
     show: {
       opacity: 1,
-      y: 0,
+      transform: 'translateY(0)',
       transition: {
         ease: [0.37, 0, 0.63, 1],
         staggerChildren: staggerChildren,
@@ -27,10 +27,10 @@ export default function FadeIn({
   };
 
   const item = {
-    hidden: { opacity: 0, y: 32 },
+    hidden: { opacity: 0, transform: 'translateY(32px)' },
     show: {
       opacity: 1,
-      y: 0,
+      transform: 'translateY(0)',
       transition: {
         duration: 1.05,
         ease: [0.37, 0, 0.63, 1],

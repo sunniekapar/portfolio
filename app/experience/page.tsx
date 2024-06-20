@@ -1,6 +1,5 @@
 import NavigationMenu from "@/components/navigation-menu";
 import FadeIn from "@/components/fade-in";
-import GlowSeparator from "@/components/glow-separator";
 import Link from "next/link";
 import { HiMiniHome, HiMiniFolder } from "react-icons/hi2";
 import ExperienceCard from "./components/experience-card";
