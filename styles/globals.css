@@ -44,8 +44,7 @@
   }
 
   body::before {
-    @apply pointer-events-none fixed left-0 top-0 z-[1000] h-full w-full opacity-20 content-[""];
-    filter: url(#grainy);
+    @apply pointer-events-none fixed left-0 top-0 z-[1000] h-full w-full opacity-20 content-[""] md:[filter:url(#grainy)];
   }
 
   ::-webkit-scrollbar {
