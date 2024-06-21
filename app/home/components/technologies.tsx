@@ -1,4 +1,5 @@
 import BentoCard from "@/components/bento-card";
+import FadeIn from "@/components/fade-in";
 import {
   SiMongodb,
   SiExpress,
@@ -31,7 +32,10 @@ export default function Technologies() {
       <h2 className="mb-6 text-2xl font-semibold leading-tight sm:text-3xl">
         What I like to use.
       </h2>
-      <div className="mb-6 flex flex-wrap justify-center gap-6 text-3xl text-accent-foreground md:items-start md:text-4xl">
+      <FadeIn
+        staggerChildren={0.15}
+        className="mb-6 flex flex-wrap justify-center gap-6 text-3xl text-accent-foreground md:items-start md:text-4xl"
+      >
         {icons.map((icon) => {
           return (
             <div key={icon.key} className="group">
@@ -42,7 +46,7 @@ export default function Technologies() {
             </div>
           );
         })}
-      </div>
+      </FadeIn>
     </BentoCard>
   );
 }

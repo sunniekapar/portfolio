@@ -37,7 +37,7 @@ export default function Socials() {
           Feel free to reach out and chat.
         </span>
       </p>
-      <FadeIn className="mt-8 flex gap-8">
+      <FadeIn staggerChildren={0.2} className="mt-8 flex gap-8">
         {socialButtonsData.map((button, index) => (
           <SocialButton
             key={index}

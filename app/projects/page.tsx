@@ -46,7 +46,7 @@ export default function page() {
             <NavigationMenu buttons={navigationMenuButtons} />
           </div>
 
-          <FadeIn staggerChildren={0.2} className="fade-siblings space-y-5">
+          <FadeIn staggerChildren={0.2} className="md:fade-siblings space-y-5">
             <GlowSeparator />
             {projectData.map((project, index) => {
               return (
