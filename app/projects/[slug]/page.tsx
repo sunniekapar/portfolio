@@ -20,27 +20,26 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   }
 
   let { title, summary: description } = project;
-  let ogImage = `https://sunniekapar.com/og?title=${encodeURIComponent(title)}`;
 
   return {
-    title,
+    title: `${title} | Sunnie Kapar`,
     description,
     openGraph: {
-      title,
+      title: `${title} - Sunnie Kapar`,
       description,
-      type: "article",
+      type: "website",
       url: `https://sunniekapar.com/project/${params.slug}`,
       images: [
         {
-          url: ogImage,
+          url: "/og-image.png",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: `${title} - Sunnie Kapar`,
       description,
-      images: [ogImage],
+      images: ["/og-image.png"],
     },
   };
 }
