@@ -62,7 +62,7 @@ export default function Page({ params }: { params: { slug: string } }) {
       </div>
       <Template className="grid min-h-dvh gap-10 lg:grid-cols-2">
         <FadeIn className="max-w-[60ch] place-self-center">
-          <div className="mb-4 flex flex-wrap items-baseline gap-8">
+          <div className="mb-5 flex flex-wrap items-baseline gap-8">
             <h1 className="text-6xl font-semibold">{title}.</h1>
             <span className="flex items-center gap-4">
               <SocialButton
@@ -81,17 +81,14 @@ export default function Page({ params }: { params: { slug: string } }) {
             </span>
           </div>
 
-          <FadeIn
-            staggerChildren={0.1}
-            className="mb-4 flex flex-wrap gap-2 *:rounded-full *:border *:border-white/20 *:bg-accent-foreground *:px-3 *:py-1 *:text-xs"
-          >
+          <FadeIn staggerChildren={0.1} className="mb-5 flex flex-wrap gap-2">
             {tags.map((tag, index) => (
-              <div
+              <p
                 key={index}
-                className="transition duration-300 hover:brightness-75"
+                className="rounded-full bg-accent-foreground px-3 py-1 text-xs text-accent transition hover:bg-accent hover:text-accent-foreground"
               >
                 {tag}
-              </div>
+              </p>
             ))}
           </FadeIn>
 

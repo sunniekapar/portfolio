@@ -9,6 +9,24 @@ export type ProjectDataProps = {
 
 export const projectData: ProjectDataProps[] = [
   {
+    title: "WatChat",
+    description:
+      "WatChat uses Supabase VectorDB retriever to find relevant information about the University of Waterloo and passes it as context to GPT-4o to provide an answer. To gather all the documents I used Puppeteer to scrape the pages in the University of Website, and Cheerio to clean up the HTML. I then used Langchain to split and chunk the data and store it in a Supabase VectorDB.",
+    summary:
+      "A RAG chatbot that answers questions about the University of Waterloo",
+    tags: [
+      "Langchain",
+      "Cheerio",
+      "Puppeteer",
+      "OpenAI",
+      "Supabase",
+      "TailwindCSS",
+      "Shadcn",
+      "Next.js",
+    ],
+    date: "May 2024",
+  },
+  {
     title: "eco",
     description:
       "eco leverages advanced Computer Vision technology, powered by YOLOv8 and OpenCV, to detect fruits, vegetables, and groceries while accurately predicting their expiry dates. The app includes a Discord bot that notifies users of impending expirations and alerts them about unused groceries. Users can easily generate delicious recipes using OpenAI's API, utilizing ingredients from their fridge. Additionally, eco features a Shameboard to track and highlight instances of food waste, encouraging community members to take responsibility for their consumption habits.",
