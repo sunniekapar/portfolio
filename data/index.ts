@@ -11,7 +11,7 @@ export const projectData: ProjectDataProps[] = [
   {
     title: "WatChat",
     description:
-      "WatChat uses Supabase VectorDB retriever to find relevant information about the University of Waterloo and passes it as context to GPT-4o to provide an answer. To gather all the documents I used Puppeteer to scrape the pages in the University of Website, and Cheerio to clean up the HTML. I then used Langchain to split and chunk the data and store it in a Supabase VectorDB.",
+      "WatChat uses Supabase VectorDB retriever to find relevant information about the University of Waterloo and passes it as context to GPT-4o to provide an answer. To gather all the documents I used Puppeteer to scrape the pages in the University of Waterloo website, and Cheerio to clean up the HTML. I then used Langchain to split and chunk the data and store it in a Supabase VectorDB.",
     summary:
       "A RAG chatbot that answers questions about the University of Waterloo",
     tags: [
