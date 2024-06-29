@@ -29,17 +29,11 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       description,
       type: "website",
       url: `https://sunniekapar.com/project/${params.slug}`,
-      images: [
-        {
-          url: "/og-image.png",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} - Sunnie Kapar`,
       description,
-      images: ["/og-image.png"],
     },
   };
 }
