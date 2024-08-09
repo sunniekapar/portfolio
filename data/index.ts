@@ -9,6 +9,14 @@ export type ProjectDataProps = {
 
 export const projectData: ProjectDataProps[] = [
   {
+    title: "Enfra",
+    description: "Enfra leverages APIs like Mapbox, WalkScore, and machine learning algorithms like Random Forest Regression (RFR), to accurately evaluate the environmental footprint of urban projects.",
+    summary: "An all-in-one sustainable urban development tool - Winner @ TerraHacks",
+    date: "Aug. 2024",
+    tags: ["Next.js", "Drizzle", "Turso", "SQLite","TypeScript", "Python"],
+    href: "https://devpost.com/software/app-ny81rs?ref_content=user-portfolio&ref_feature=in_progress"
+  },
+  {
     title: "WatChat",
     description:
       "WatChat uses Supabase VectorDB retriever to find relevant information about the University of Waterloo and passes it as context to GPT-4o to provide an answer. To gather all the documents I used Puppeteer to scrape the pages in the University of Waterloo website, and Cheerio to clean up the HTML. I then used Langchain to split and chunk the data and store it in a Supabase VectorDB.",

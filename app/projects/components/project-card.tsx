@@ -20,9 +20,9 @@ export default function ProjectCard({ title, summary }: ProjectDataProps) {
             />
           </div>
 
-          <div className="flex h-full flex-col justify-center gap-4 px-4 pb-4">
+          <div className="flex h-full flex-col justify-center gap-2 px-4 pb-4">
             <span className="flex items-center gap-4">
-              <h3 className="font-semibold"> {title} </h3>
+              <h3 className="font-medium"> {title} </h3>
               <FaArrowRight className="-translate-x-1 scale-95 opacity-0 duration-200 group-hover:translate-x-0 group-hover:scale-100 group-hover:opacity-100" />
             </span>
             <p className="whitespace-pre-wrap text-muted-foreground">

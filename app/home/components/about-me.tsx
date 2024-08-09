@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <BentoCard className="flex items-center">
       <p className="text-center text-lg font-medium leading-snug sm:text-xl md:text-left lg:text-2xl">
-        I&apos;m an 18 year-old self taught full-stack developer,{" "}
+        I&apos;m a 19 year-old self taught full-stack developer,{" "}
         <span className="">
           currently studying computer engineering at University of Waterloo.
         </span>

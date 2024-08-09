@@ -23,7 +23,7 @@ export default function page() {
   return (
     <>
       <Background />
-      <Template className="max-w-[80ch]">
+      <Template className="max-w-screen-lg">
         <FadeIn>
           <div className="mb-8">
             <h1 className="mb-8 text-5xl font-semibold"> Projects.</h1>
