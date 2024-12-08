@@ -33,12 +33,12 @@ export default function page() {
                   Linkedin
                 </Link>
               </span>{" "}
-              or check out my{" "}
+              {/* or check out my{" "}
               <span className="font-semibold italic underline underline-offset-2">
                 <Link href="/pdf/resume.pdf" target="_blank" locale={false}>
                   resume.
                 </Link>
-              </span>
+              </span> */}
             </p>
             <NavigationMenu buttons={navigationMenuButtons} />
           </div>

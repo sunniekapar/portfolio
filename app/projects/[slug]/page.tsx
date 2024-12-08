@@ -54,7 +54,7 @@ export default function Page({ params }: { params: { slug: string } }) {
         <div className="absolute -left-20 h-full w-1/4 bg-[radial-gradient(ellipse_at_left,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
       </div>
-      <Template className="grid min-h-dvh gap-10 lg:grid-cols-2">
+      <Template className="grid min-h-dvh max-w-screen-2xl gap-10 lg:grid-cols-2">
         <FadeIn className="max-w-[60ch] place-self-center">
           <div className="mb-5 flex flex-wrap items-baseline gap-8">
             <h1 className="text-6xl font-semibold">{title}.</h1>
@@ -91,7 +91,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           <NavigationMenu buttons={navButtons} />
         </FadeIn>
 
-        <div className="relative aspect-[4/3] w-full max-w-[600px] animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
+        <div className="relative aspect-[4/3] w-full max-w-[800px] lg:skew-y-12 animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
           <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent to-accent-foreground opacity-100 blur-xl" />
           <Image
             src={`/images/projects/${cleanTitle}.jpg`}
