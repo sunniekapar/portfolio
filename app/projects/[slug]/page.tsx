@@ -91,7 +91,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           <NavigationMenu buttons={navButtons} />
         </FadeIn>
 
-        <div className="relative aspect-[4/3] w-full max-w-[800px] lg:skew-y-12 animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
+        <div className="relative aspect-[4/3] w-full max-w-[600px] animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
           <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent to-accent-foreground opacity-100 blur-xl" />
           <Image
             src={`/images/projects/${cleanTitle}.jpg`}
