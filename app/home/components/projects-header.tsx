@@ -2,11 +2,11 @@ import BentoCard from "@/components/bento-card";
 
 const ScrollingText = () => {
   return (
-    <p className="flex animate-infinite-scroll gap-8 whitespace-nowrap text-4xl font-semibold tracking-widest text-accent">
-      <span className="font-light text-accent-foreground">Projects.</span>
-      <span>Projects.</span>
-      <span className="font-light text-accent-foreground">Projects.</span>
-      <span> Projects.</span>
+    <p className="flex animate-infinite-scroll gap-8 whitespace-nowrap text-5xl font-semibold tracking-widest text-accent">
+      <span className="array font-light text-accent-foreground">Projects</span>
+      <span className="array font-light">Projects</span>
+      <span className="array font-light text-accent-foreground">Projects</span>
+      <span className="array font-light"> Projects</span>
     </p>
   );
 };

@@ -92,7 +92,14 @@ export default function Page({ params }: { params: { slug: string } }) {
         </FadeIn>
 
         <div className="relative aspect-[4/3] w-full max-w-[600px] animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
-          <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent to-accent-foreground opacity-100 blur-xl" />
+          <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent/50 to-accent-foreground/50 blur-xl" />
+          <Image
+            src={`/images/projects/${cleanTitle}.jpg`}
+            alt={title}
+            quality={0}
+            fill
+            className={`absolute h-full w-full scale-110 object-cover blur-3xl saturate-200 ${cleanTitle === "solfocus" || cleanTitle === "inner-compass" ? "opacity-20" : ""}`}
+          />
           <Image
             src={`/images/projects/${cleanTitle}.jpg`}
             alt={title}

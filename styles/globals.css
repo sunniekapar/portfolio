@@ -40,7 +40,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased relative;
+    @apply relative bg-background text-foreground antialiased;
   }
 
   body::before {
@@ -95,5 +95,9 @@
 
   .fade-siblings:hover > *:hover {
     opacity: 1 !important;
+  }
+
+  .array {
+    font-family: var(--font-array);
   }
 }

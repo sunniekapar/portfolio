@@ -90,15 +90,15 @@ module.exports = {
         tilt: {
           "0%, 50%, 100%": {
             transform: "rotate(0deg)",
-            opacity: "50%",
+            opacity: "100%",
           },
           "25%": {
             transform: "rotate(1deg)",
-            opacity: "25%",
+            opacity: "50%",
           },
           "75%": {
             transform: "rotate(-1deg)",
-            opacity: "25%",
+            opacity: "100%",
           },
         },
         breathe: {
