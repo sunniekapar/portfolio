@@ -13,7 +13,8 @@ export async function generateStaticParams() {
   });
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   let project = projectData.find((post) => post.title === params.slug);
   if (!project) {
     return;
@@ -38,7 +39,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const navButtons = [{ Icon: FiArrowLeft, label: "Back", href: "/projects" }];
   const clean = (slug: string) => slug.toLowerCase().replaceAll(" ", "-");
   let project = projectData.find(
