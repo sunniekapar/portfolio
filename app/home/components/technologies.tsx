@@ -1,15 +1,15 @@
 import BentoCard from "@/components/bento-card";
 import {
-  SiMongodb,
-  SiExpress,
-  SiReact,
   SiBun,
   SiExpo,
-  SiNextdotjs,
+  SiExpress,
   SiFramer,
-  SiTypescript,
-  SiTailwindcss,
+  SiMongodb,
+  SiNextdotjs,
+  SiReact,
   SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 
 const icons = [
