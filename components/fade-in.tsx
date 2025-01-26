@@ -1,6 +1,7 @@
 "use client";
-import { motion, useInView, MotionProps } from "framer-motion";
+
 import React from "react";
+import { motion, MotionProps, useInView } from "motion/react"
 import { PropsWithChildren, useRef } from "react";
 
 interface FadeInProps extends PropsWithChildren<MotionProps> {
