@@ -54,11 +54,11 @@ export default function page() {
   return (
     <>
       <Background />
-      <Template className="max-w-screen-md">
+      <Template className="max-w-screen-lg">
         <FadeIn>
-          <div className="mb-20">
-            <h1 className="mb-10 text-5xl font-semibold">Experience.</h1>
-            <p className="mb-4 font-medium">
+          <div className="mb-12">
+            <h1 className="mb-8 text-5xl font-semibold">Experience.</h1>
+            <p className="mb-4 font-medium text-muted-foreground">
               You can learn more about me on{" "}
               <span className="font-semibold italic underline underline-offset-2">
                 <Link
@@ -67,7 +67,7 @@ export default function page() {
                 >
                   Linkedin
                 </Link>
-              </span>{" "}
+              </span>
             </p>
             <NavigationMenu buttons={navigationMenuButtons} />
           </div>

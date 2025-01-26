@@ -1,36 +1,40 @@
-import BentoCard from "@/components/bento-card";
 import FadeIn from "@/components/fade-in";
 import { ProjectDataProps } from "@/data";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function ProjectCard({ title, summary }: ProjectDataProps) {
   const slug = title.toLowerCase().replaceAll(" ", "-");
   return (
     <Link href={`/projects/${slug}`}>
-      <BentoCard className="!p-2">
-        <FadeIn className="group flex flex-col gap-4 hover:cursor-pointer sm:grid sm:grid-cols-four-ten">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-gradient-to-br from-background to-transparent bg-cover">
-            <Image
-              src={`/images/projects/${slug}.jpg`}
-              alt={title}
-              fill
-              className="relative aspect-[4/3] object-cover"
-            />
-          </div>
+      <FadeIn className="group flex flex-col gap-4 hover:cursor-pointer">
+        <div className="group relative aspect-[4/3] w-full max-w-screen-sm rounded-sm bg-gradient-to-br from-background to-transparent bg-cover">
+          <Image
+            quality={1}
+            src={`/images/projects/${slug}.jpg`}
+            alt={title}
+            fill
+            className="absolute inset-0 object-cover opacity-0 blur-3xl saturate-200 transition-opacity duration-300 ease-smooth group-hover:opacity-80"
+          />
+          <Image
+            src={`/images/projects/${slug}.jpg`}
+            alt={title}
+            fill
+            className="relative aspect-[4/3] rounded-sm object-cover"
+          />
+        </div>
 
-          <div className="flex h-full flex-col justify-center gap-2 px-4 pb-4">
-            <span className="flex items-center gap-4">
-              <h3 className="font-medium"> {title} </h3>
-              <FaArrowRight className="-translate-x-1 scale-95 opacity-0 duration-200 group-hover:translate-x-0 group-hover:scale-100 group-hover:opacity-100" />
-            </span>
-            <p className="whitespace-pre-wrap text-muted-foreground">
-              {summary}
-            </p>
-          </div>
-        </FadeIn>
-      </BentoCard>
+        <div className="flex h-full flex-col justify-center gap-1">
+          <span className="flex items-center gap-4">
+            <h3 className="font-medium"> {title} </h3>
+            <FaArrowRight className="-translate-x-1 scale-95 opacity-0 duration-200 group-hover:translate-x-0 group-hover:scale-100 group-hover:opacity-100" />
+          </span>
+          <p className="whitespace-pre-wrap text-accent-foreground">
+            {summary}
+          </p>
+        </div>
+      </FadeIn>
     </Link>
   );
 }
