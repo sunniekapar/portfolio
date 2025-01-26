@@ -1,8 +1,14 @@
 "use client";
 import BentoCard from "@/components/bento-card";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
-import { HiMenuAlt3 } from "react-icons/hi";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { HiMenuAlt3 } from "react-icons/hi";
 import FlipLink from "./flip-link";
 
 export default function Navbar() {
@@ -23,6 +29,8 @@ export default function Navbar() {
           </Button>
         </SheetTrigger>
         <SheetContent className="flex h-full w-2/3 flex-col place-items-center justify-center gap-8 bg-background/95 md:hidden md:flex-row">
+          <SheetTitle></SheetTitle>
+          <SheetDescription></SheetDescription>
           <NavLinks />
         </SheetContent>
       </Sheet>
