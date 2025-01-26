@@ -13,16 +13,12 @@ export default function FlipLink({
   ...props
 }: FlipLinkProps) {
   return (
-    <Link
-      href={href}
-      className={cn("group relative", className)}
-      {...props}
-    >
+    <Link href={href} className={cn("group relative", className)} {...props}>
       <span className="relative inline-flex overflow-hidden">
-        <div className="ease-smooth translate-y-0 skew-y-0 transition duration-500 group-hover:-translate-y-[120%] group-hover:skew-y-[24deg] group-hover:opacity-0">
+        <div className="translate-y-0 skew-y-0 transition duration-500 ease-smooth group-hover:-translate-y-[120%] group-hover:skew-y-[24deg] group-hover:opacity-0">
           {children}
         </div>
-        <div className="ease-smooth absolute translate-y-[120%] skew-y-[24deg] opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0 group-hover:opacity-100">
+        <div className="absolute translate-y-[120%] skew-y-[24deg] opacity-0 transition duration-500 ease-smooth group-hover:translate-y-0 group-hover:skew-y-0 group-hover:opacity-100">
           {children}
         </div>
       </span>

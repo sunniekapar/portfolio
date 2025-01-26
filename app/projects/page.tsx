@@ -1,6 +1,5 @@
 import NavigationMenu from "@/components/navigation-menu";
 import FadeIn from "@/components/fade-in";
-import GlowSeparator from "@/components/glow-separator";
 import Template from "@/components/template";
 import { projectData } from "@/data";
 import Link from "next/link";
@@ -46,15 +45,9 @@ export default function page() {
             <NavigationMenu buttons={navigationMenuButtons} />
           </div>
 
-          <FadeIn staggerChildren={0.2} className="md:fade-siblings space-y-5">
-            <GlowSeparator />
-            {projectData.map((project, index) => {
-              return (
-                <>
-                  <ProjectCard {...project} key={project.title} />
-                  <GlowSeparator className="my-5" key={index} />
-                </>
-              );
+          <FadeIn staggerChildren={0.2} className="space-y-5">
+            {projectData.map((project) => {
+              return <ProjectCard key={project.title} {...project} />;
             })}
           </FadeIn>
         </FadeIn>

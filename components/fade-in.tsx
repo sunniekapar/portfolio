@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, MotionProps, useInView } from "motion/react"
+import { motion, MotionProps, useInView } from "motion/react";
 import { PropsWithChildren, useRef } from "react";
 
 interface FadeInProps extends PropsWithChildren<MotionProps> {
@@ -16,10 +16,10 @@ export default function FadeIn({
   ...props
 }: FadeInProps) {
   const container = {
-    hidden: { opacity: 0, transform: 'translateY(32px)' },
+    hidden: { opacity: 0, transform: "translateY(32px)" },
     show: {
       opacity: 1,
-      transform: 'translateY(0)',
+      transform: "translateY(0)",
       transition: {
         ease: [0.37, 0, 0.63, 1],
         staggerChildren: staggerChildren,
@@ -28,10 +28,10 @@ export default function FadeIn({
   };
 
   const item = {
-    hidden: { opacity: 0, transform: 'translateY(32px)' },
+    hidden: { opacity: 0, transform: "translateY(32px)" },
     show: {
       opacity: 1,
-      transform: 'translateY(0)',
+      transform: "translateY(0)",
       transition: {
         duration: 1.05,
         ease: [0.37, 0, 0.63, 1],

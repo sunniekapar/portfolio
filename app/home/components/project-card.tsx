@@ -19,14 +19,10 @@ export default function ProjectCard({
         />
       </div>
 
-      <div className="ease-smooth absolute bottom-4 z-10 my-4 flex h-fit translate-y-32 select-none flex-wrap items-center space-x-2 px-8 text-sm opacity-0 duration-300 group-hover:-translate-y-0 group-hover:opacity-100 xl:text-lg">
+      <div className="absolute bottom-4 z-10 my-4 flex h-fit translate-y-32 select-none flex-wrap items-center space-x-2 px-8 text-sm opacity-0 duration-300 ease-smooth group-hover:-translate-y-0 group-hover:opacity-100 xl:text-lg">
         <h2 className="font-semibold">{title}</h2>
-        <p className="font-normal italic text-accent-foreground">
-          — {date}
-        </p>
-        <p className="!ml-0 basis-full text-accent-foreground">
-          {summary}
-        </p>
+        <p className="font-normal italic text-accent-foreground">— {date}</p>
+        <p className="!ml-0 basis-full text-accent-foreground">{summary}</p>
       </div>
     </>
   );

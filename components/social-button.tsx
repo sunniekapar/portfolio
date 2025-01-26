@@ -22,7 +22,7 @@ export default function SocialButton({
           </div>
         </Link>
       </HoverCardTrigger>
-      <HoverCardContent className="w-fit px-1.5 py-px text-xs bg-accent-foreground/20 border-accent">
+      <HoverCardContent className="w-fit border-accent bg-accent-foreground/20 px-1.5 py-px text-xs">
         {description}
       </HoverCardContent>
     </HoverCard>

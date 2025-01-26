@@ -1,11 +1,11 @@
-import NavigationMenu from "@/components/navigation-menu";
 import FadeIn from "@/components/fade-in";
+import NavigationMenu from "@/components/navigation-menu";
+import SocialButton from "@/components/social-button";
 import Template from "@/components/template";
 import { projectData } from "@/data";
-import { FiArrowLeft, FiExternalLink } from "react-icons/fi";
-import SocialButton from "@/components/social-button";
-import { SiGithub } from "react-icons/si";
 import Image from "next/image";
+import { FiArrowLeft, FiExternalLink } from "react-icons/fi";
+import { SiGithub } from "react-icons/si";
 
 export async function generateStaticParams() {
   return projectData.map((project) => {
@@ -13,7 +13,9 @@ export async function generateStaticParams() {
   });
 }
 
-export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
   let project = projectData.find((post) => post.title === params.slug);
   if (!project) {
@@ -39,7 +41,9 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   };
 }
 
-export default async function Page(props: { params: Promise<{ slug: string }> }) {
+export default async function Page(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
   const navButtons = [{ Icon: FiArrowLeft, label: "Back", href: "/projects" }];
   const clean = (slug: string) => slug.toLowerCase().replaceAll(" ", "-");
@@ -98,7 +102,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
           <Image
             src={`/images/projects/${cleanTitle}.jpg`}
             alt={title}
-            quality={0}
+            quality={1}
             fill
             className={`absolute h-full w-full scale-110 object-cover blur-3xl saturate-200 ${cleanTitle === "solfocus" || cleanTitle === "inner-compass" ? "opacity-20" : ""}`}
           />

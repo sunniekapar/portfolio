@@ -11,7 +11,7 @@ export default function ProjectCard({ title, summary }: ProjectDataProps) {
     <Link href={`/projects/${slug}`}>
       <BentoCard className="!p-2">
         <FadeIn className="group flex flex-col gap-4 hover:cursor-pointer sm:grid sm:grid-cols-four-ten">
-          <div className="relative aspect-[4/3] w-full rounded-sm overflow-hidden bg-gradient-to-br from-background to-transparent bg-cover">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-gradient-to-br from-background to-transparent bg-cover">
             <Image
               src={`/images/projects/${slug}.jpg`}
               alt={title}

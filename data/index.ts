@@ -10,11 +10,13 @@ export type ProjectDataProps = {
 export const projectData: ProjectDataProps[] = [
   {
     title: "Enfra",
-    description: "Enfra leverages APIs like Mapbox, WalkScore, and machine learning algorithms like Random Forest Regression (RFR), to accurately evaluate the environmental footprint of urban projects.",
-    summary: "An all-in-one sustainable urban development tool - Winner @ TerraHacks",
+    description:
+      "Enfra leverages APIs like Mapbox, WalkScore, and machine learning algorithms like Random Forest Regression (RFR), to accurately evaluate the environmental footprint of urban projects.",
+    summary:
+      "An all-in-one sustainable urban development tool - Winner @ TerraHacks",
     date: "Aug. 2024",
-    tags: ["Next.js", "Drizzle", "Turso", "SQLite","TypeScript", "Python"],
-    href: "https://devpost.com/software/app-ny81rs?ref_content=user-portfolio&ref_feature=in_progress"
+    tags: ["Next.js", "Drizzle", "Turso", "SQLite", "TypeScript", "Python"],
+    href: "https://devpost.com/software/app-ny81rs?ref_content=user-portfolio&ref_feature=in_progress",
   },
   {
     title: "WatChat",

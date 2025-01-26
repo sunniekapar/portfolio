@@ -25,7 +25,7 @@ export default function ProjectsCarousel() {
     >
       <CarouselContent>
         {projectData.map((project, index) => {
-          const slug = project.title.toLowerCase().replaceAll(' ', '-');
+          const slug = project.title.toLowerCase().replaceAll(" ", "-");
           return (
             <CarouselItem
               key={index}

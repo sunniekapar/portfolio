@@ -6,7 +6,10 @@ export default function Template({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <main {...props} className={cn("container px-4 py-4 md:py-16 md:px-8", className)}>
+    <main
+      {...props}
+      className={cn("container px-4 py-4 md:px-8 md:py-16", className)}
+    >
       {children}
     </main>
   );
