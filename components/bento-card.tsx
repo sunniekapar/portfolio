@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { Card } from "./ui/card";
 import { cn } from "../lib/utils";
+import { Card } from "./ui/card";
 
 export default function BentoCard(props: React.HTMLAttributes<HTMLDivElement>) {
   const ref = useRef<HTMLDivElement>(null);

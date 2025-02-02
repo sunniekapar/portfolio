@@ -80,8 +80,8 @@ module.exports = {
           to: { height: "0" },
         },
         "infinite-scroll": {
-          from: { transform: "translateX(-100%)" },
-          to: { transform: "translateX(107.5%)" },
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
         background: {
           from: { opacity: "0" },
