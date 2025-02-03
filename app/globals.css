@@ -72,31 +72,6 @@
 }
 
 @layer components {
-  .drag-none {
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-
-  .fade-siblings {
-    pointer-events: none;
-  }
-
-  .fade-siblings > * {
-    pointer-events: auto;
-    transition: 300ms opacity !important;
-  }
-
-  .fade-siblings:hover > :nth-child(even) {
-    opacity: 0.25 !important;
-  }
-
-  .fade-siblings:hover > *:hover {
-    opacity: 1 !important;
-  }
-
   .array {
     font-family: var(--font-array);
   }
