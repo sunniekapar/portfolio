@@ -11,11 +11,11 @@ export default function ProjectCard({
     <>
       <div className="relative h-full w-full rounded-lg">
         <Image
-          src={`/images/projects/${slug}.jpg`}
+          src={`/images/projects/${slug}.png`}
           alt={title}
           quality={80}
           fill
-          className="pointer-events-none aspect-[4/3] min-h-full min-w-full scale-100 select-none rounded-lg object-cover brightness-90 duration-300 group-hover:scale-105 group-hover:brightness-[20%]"
+          className="pointer-events-none aspect-video min-h-full min-w-full scale-100 select-none rounded-lg object-cover brightness-90 duration-300 group-hover:scale-105 group-hover:brightness-[20%]"
         />
       </div>
 

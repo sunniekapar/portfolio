@@ -9,19 +9,19 @@ export default function ProjectCard({ title, summary }: ProjectDataProps) {
   return (
     <Link href={`/projects/${slug}`}>
       <FadeIn className="group flex flex-col gap-4 hover:cursor-pointer">
-        <div className="group relative aspect-[4/3] w-full max-w-screen-sm rounded-sm bg-gradient-to-br from-background to-transparent bg-cover">
+        <div className="group relative aspect-video w-full max-w-screen-sm rounded-sm bg-gradient-to-br from-background to-transparent bg-cover">
           <Image
             quality={1}
-            src={`/images/projects/${slug}.jpg`}
+            src={`/images/projects/${slug}.png`}
             alt={title}
             fill
             className="absolute inset-0 object-cover opacity-0 blur-3xl saturate-200 transition-opacity duration-300 ease-smooth group-hover:opacity-80"
           />
           <Image
-            src={`/images/projects/${slug}.jpg`}
+            src={`/images/projects/${slug}.png`}
             alt={title}
             fill
-            className="relative aspect-[4/3] rounded-sm object-cover"
+            className="relative aspect-video rounded-sm object-cover"
           />
         </div>
 
