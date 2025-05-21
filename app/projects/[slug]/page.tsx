@@ -60,13 +60,13 @@ export default async function Page(props: {
         <div className="absolute -left-20 h-full w-1/4 bg-[radial-gradient(ellipse_at_left,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-3/4 w-5/6 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--accent)),transparent,transparent)] blur-3xl" />
       </div>
-      <Template className="grid min-h-dvh max-w-screen-2xl gap-10 lg:grid-cols-2">
-        <FadeIn className="max-w-[60ch] place-self-center">
-          <div className="mb-5 flex flex-wrap items-baseline gap-8">
+      <Template className="flex min-h-dvh max-w-screen-2xl flex-col items-center">
+        <FadeIn className="max-w-prose">
+          <div className="mb-6 flex flex-wrap items-baseline gap-4">
             <h1 className="text-6xl font-semibold">{title}.</h1>
             <span className="flex items-center gap-4">
               <SocialButton
-                icon={<SiGithub className="text-2xl" />}
+                icon={<SiGithub className="text-xl" />}
                 description="Repository"
                 href={`https://github.com/sunniekapar/${cleanTitle}`}
               />
@@ -74,14 +74,29 @@ export default async function Page(props: {
               {project.href ? (
                 <SocialButton
                   description={"Website"}
-                  icon={<FiExternalLink />}
+                  icon={<FiExternalLink className="text-xl" />}
                   href={project.href}
                 />
               ) : null}
             </span>
           </div>
-
-          <FadeIn staggerChildren={0.1} className="mb-5 flex flex-wrap gap-2">
+          <div className="relative mb-4 aspect-video w-full max-w-full animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
+            <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent/50 to-accent-foreground/50 blur-xl" />
+            <Image
+              src={`/images/projects/${cleanTitle}.png`}
+              alt={title}
+              quality={1}
+              fill
+              className="absolute h-full w-full scale-110 object-cover blur-3xl saturate-200"
+            />
+            <Image
+              src={`/images/projects/${cleanTitle}.png`}
+              alt={title}
+              fill
+              className="pointer-events-none relative rounded-lg object-cover"
+            />
+          </div>
+          <FadeIn staggerChildren={0.1} className="mb-4 flex flex-wrap gap-2">
             {tags.map((tag, index) => (
               <p
                 key={index}
@@ -91,28 +106,9 @@ export default async function Page(props: {
               </p>
             ))}
           </FadeIn>
-
           <div className="mb-8">{description}</div>
-
           <NavigationMenu buttons={navButtons} />
         </FadeIn>
-
-        <div className="relative aspect-video w-full max-w-[800px] animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
-          <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent/50 to-accent-foreground/50 blur-xl" />
-          <Image
-            src={`/images/projects/${cleanTitle}.png`}
-            alt={title}
-            quality={1}
-            fill
-            className="absolute h-full w-full scale-110 object-cover blur-3xl saturate-200"
-          />
-          <Image
-            src={`/images/projects/${cleanTitle}.png`}
-            alt={title}
-            fill
-            className="pointer-events-none relative rounded-lg object-cover"
-          />
-        </div>
       </Template>
     </>
   );
