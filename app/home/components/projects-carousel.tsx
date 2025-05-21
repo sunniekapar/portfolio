@@ -29,7 +29,7 @@ export default function ProjectsCarousel() {
           return (
             <CarouselItem
               key={index}
-              className="group aspect-[4/3] basis-full md:basis-1/2 xl:basis-1/3"
+              className="group aspect-video basis-full md:basis-1/2 xl:basis-1/2"
             >
               <Link href={`/projects/${slug}`}>
                 <BentoCard className="!p-0">

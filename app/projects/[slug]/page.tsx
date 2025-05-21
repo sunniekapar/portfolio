@@ -97,17 +97,17 @@ export default async function Page(props: {
           <NavigationMenu buttons={navButtons} />
         </FadeIn>
 
-        <div className="relative aspect-[4/3] w-full max-w-[600px] animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
+        <div className="relative aspect-video w-full max-w-[800px] animate-appear place-self-center rounded-lg duration-1000 ease-smooth">
           <div className="absolute -inset-0.5 h-full w-full animate-tilt rounded-lg bg-gradient-to-tr from-accent/50 to-accent-foreground/50 blur-xl" />
           <Image
-            src={`/images/projects/${cleanTitle}.jpg`}
+            src={`/images/projects/${cleanTitle}.png`}
             alt={title}
             quality={1}
             fill
-            className={`absolute h-full w-full scale-110 object-cover blur-3xl saturate-200 ${cleanTitle === "solfocus" || cleanTitle === "inner-compass" ? "opacity-20" : ""}`}
+            className="absolute h-full w-full scale-110 object-cover blur-3xl saturate-200"
           />
           <Image
-            src={`/images/projects/${cleanTitle}.jpg`}
+            src={`/images/projects/${cleanTitle}.png`}
             alt={title}
             fill
             className="pointer-events-none relative rounded-lg object-cover"
