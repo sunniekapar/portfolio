@@ -14,6 +14,13 @@ export const metadata = {
 const experiences = [
   {
     role: "Software Engineer",
+    company: "HappyRobot",
+    date: "2025",
+    href: "happyrobot",
+    description: "AI workflows for the future of communication.",
+  },
+  {
+    role: "Software Engineer",
     company: "OICR",
     date: "2025",
     href: "oicr",
