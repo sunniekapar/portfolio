@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <link rel="icon" href="/images/favicon.ico" sizes="any" />
-      <body className={`${inter.className} ${array.variable}`}>
+      <body className={`min-h-dvh ${inter.className} ${array.variable}`}>
         <NoiseSVG />
         {children}
       </body>
