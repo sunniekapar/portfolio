@@ -70,7 +70,7 @@ export default function page() {
               <span className="font-semibold italic underline underline-offset-2">
                 <Link
                   target="_blank"
-                  href="https://linkedin.com/in/sunnie-kapar"
+                  href="https://linkedin.com/in/sunniekapar"
                 >
                   Linkedin
                 </Link>
