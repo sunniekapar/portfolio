@@ -12,7 +12,7 @@ const socialButtonsData = [
   {
     icon: <SiLinkedin />,
     description: "Sunnie Kapar",
-    href: "https://www.linkedin.com/in/sunnie-kapar/",
+    href: "https://www.linkedin.com/in/sunniekapar/",
   },
   {
     icon: <SiX />,
